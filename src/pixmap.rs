@@ -53,7 +53,7 @@ impl Pixmap {
     }
 
     #[cfg(feature = "png-format")]
-    pub(crate) fn from_vec(data: Vec<u8>, size: IntSize) -> Option<Self> {
+    pub fn from_vec(data: Vec<u8>, size: IntSize) -> Option<Self> {
         let data_len = data_len_for_size(size)?;
         if data.len() != data_len {
             return None;
